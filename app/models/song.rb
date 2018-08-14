@@ -20,16 +20,12 @@ class Song < ActiveRecord::Base
   end
 
   def note_contents=(content)
-    # binding.pry
-    # byebug
     content = content.select { |one_note_content| one_note_content != ""}
     content.each { |note_info| self.notes << Note.find_or_create_by(content: note_info) }
     self.save
-    # binding.pry
   end
 
   def note_contents
-    # binding.pry
     self.notes ? self.notes.map{ |note| note.content } : nil
   end
 

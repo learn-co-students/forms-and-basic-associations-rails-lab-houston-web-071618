@@ -14,10 +14,7 @@ class SongsController < ApplicationController
 
   def create
     @song = Song.new(song_params)
-    # binding.pry
-    # byebug
     if @song.save
-      # binding.pry
       redirect_to song_path(@song)
     else
       render :new
