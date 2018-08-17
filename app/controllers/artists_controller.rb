@@ -12,6 +12,7 @@ class ArtistsController < ApplicationController
   end
 
   def create
+    byebug
     @artist = Artist.new(artist_params)
 
     if @artist.save
