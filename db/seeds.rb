@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # ID3 tag music genres are surprisingly specific.
+Artist.new(name: "Pablo")
 
 genres = Hash[[
   "Blues",
