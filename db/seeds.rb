@@ -158,5 +158,7 @@ genres = Hash[[
   "JPop",
   "Synthpop"
 ].map { |genre| [genre, Genre.find_or_create_by(name: genre)] }]
-
+drake = Artist.create(name: "Drizzy")
+song = Song.create(title: "Wu Tang Forever", genre_id: 1, artist_id: 2)
+note = Note.create(content: "This iis a note", song_id: 1);
 
